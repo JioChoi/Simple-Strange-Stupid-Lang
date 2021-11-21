@@ -1,0 +1,33 @@
+set 0 1 //첫번째 루프 카운터 초기화
+set 1 0 //다중 루프 카운터 초기화
+
+set 2 1 //상수 1 저장
+set 3 10 //반복 횟수
+
+set 4 42 //별
+set 5 32 //스페이스
+set 6 0  //이스케이프
+
+set 7 10 //줄 바꿈
+set 8 0  //이스케이프
+
+home 0
+
+print 4
+
+add 1 2 1
+equal 1 0
+goto 2
+
+goto 0
+home 2
+
+print 7
+
+add 0 2 0
+equal 0 3
+goto 1
+
+set 1 0 //다중 루프 카운터 초기화
+goto 0
+home 1

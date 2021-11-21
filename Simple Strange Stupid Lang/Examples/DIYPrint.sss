@@ -1,0 +1,31 @@
+set 0 72	//H
+set 1 101 	//e
+set 2 108 	//l
+set 3 108 	//l
+set 4 111 	//o
+set 5 44 	//,
+set 6 32  	//(space)
+set 7 87  	//W
+set 8 111  	//o
+set 9 114  	//r
+set 10 108  //l
+set 11 100 	//d
+set 12 33 	//!
+set 13 10	//(next line)
+set 14 0	//(escape)
+
+set 15 0 //loop at
+set 16 1 //const 1
+set 18 0 //const 0 (store escape)
+
+home 0 //loop start
+	get 15 17 //set 17th memory to memory position of the value of 15th memory
+	
+	equal 17 18 //if 17th memory is escape letter
+	goto 1 //exit loop
+
+	out 17 //print the value of 17th memory
+	
+	add 15 16 15 //at + 1 = at	
+	goto 0 //go to loop start position
+home 1 //loop exit
